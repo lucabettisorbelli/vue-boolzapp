@@ -25,7 +25,7 @@
                             </div> 
                             <span>Sofia</span>
                         </div>
-                        <div class="rigthUsers">
+                        <div class="rigthUsers pe-2 text-secondary">
                             <i class="fa-solid fa-spinner"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="notificationRight d-flex flex-column">
                             <span>Ricevi notifiche di nuovi messaggi</span>
-                            <span>Attiva notifiche desktop</span>
+                            <span class="underline text-secondary">Attiva notifiche desktop</span>
                         </div>
                     </div>
 
@@ -54,11 +54,11 @@
                             <div class="imgContacts">
                                 <img class="img-fluid" :src="utenti.avatar" alt="">
                             </div>
-                            <div class="textContacs d-flex flex-column px-2 w-75">
+                            <div class="textContacs d-flex flex-column px-2">
                                 <span>{{utenti.name}}</span>
-                                <span>Ultimo messaggio inviato</span>
+                                <span class="text-secondary">Ultimo messaggio inviato</span>
                             </div>
-                            <div class="date">
+                            <div class="date text-secondary">
                                 <span>10.00</span>
                             </div>
                         </div>
@@ -75,12 +75,12 @@
                             </div>
                             <div class="messagesText d-flex flex-column">
                                 <span>Michele</span>
-                                <span>Ultimo accesso oggi alle 12.00</span>
+                                <span class="text-secondary">Ultimo accesso oggi alle 12.00</span>
                             </div>
                         </div>
-                        <div class="messagesRigth">
-                            <i class="fa-solid fa-spinner"></i>
-                            <i class="fa-solid fa-message"></i>
+                        <div class="messagesRigth pe-2 text-secondary">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
@@ -94,8 +94,16 @@
                         </div>
                     </div>
 
-                    <div class="messagesFooter">
-                        
+                    <div class="messagesFooter d-flex align-items-center justify-content-between px-3">
+                        <div class="iconFooter">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="textFooter">
+                            <input type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="iconFoot">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </div>
                 </div>
             </div>

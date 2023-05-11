@@ -1,10 +1,5 @@
 body {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#009688+20,dbdbd2+20 */
-background: #009688; /* Old browsers */
-background: -moz-linear-gradient(top,  #009688 20%, #dbdbd2 20%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #009688 20%,#dbdbd2 20%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  #009688 20%,#dbdbd2 20%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', endColorstr='#dbdbd2',GradientType=0 ); /* IE6-9 */
 
 }
 
@@ -32,9 +27,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
     height: 3rem;
 }
 
+.textContacs {
+    width: 90%;
+}
+
 .imgContacts img, .imgPersonal img, .messagesIcon img {
     border-radius: 50%;
 } 
+
+.underline {
+    text-decoration: underline;
+}
 
 .rigthUsers * {
     padding: 0.5rem;
@@ -47,7 +50,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
 }
 
 .search > input {
-    border: none;
+    border: 0.5px solid lightgray;
+    padding: 0.5rem;
+    outline: none;
 }
 
 .userBox {
@@ -57,7 +62,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
 .headerMessages {
     height: 4em;
     background-color: #eaeaea;
-    border-left: 0.1px solid grey;
+    border-left: 0.1px solid lightgrey;
 }
 
 .messagesRigth * {
@@ -94,4 +99,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
     padding: 5px;
     width: 250px;
     margin: 3px;
+}
+
+.textFooter {
+    width: 80%;
+}
+
+.textFooter > input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
