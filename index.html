@@ -19,9 +19,11 @@
                 <!-- parte di sinistra con nomi Users -->
                 <div class="col-4 bg-primary">
                     <div class="headerTextUsers d-flex justify-content-between align-items-center">
-                        <div class="leftUsers px-2">
-                            <span>jkld</span> <!--img profilo-->
-                            <span>jkld</span>
+                        <div class="leftUsers d-flex align-items-center px-2">
+                            <div class="imgPersonal pe-2">
+                                <img class="img-fluid" src="./img/avatar_io.jpg" alt="">
+                            </div> 
+                            <span>Sofia</span>
                         </div>
                         <div class="rigthUsers">
                             <i class="fa-solid fa-spinner"></i>
@@ -45,13 +47,13 @@
                         <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
                     </div>
 
-                    <div class="userContacs d-flex mt-2">
+                    <div v-for="utenti in contacts" class="userContacs d-flex mt-2">
                         <div class="imgContacts">
-                            <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
+                            <img class="img-fluid" :src="utenti.avatar" alt="">
                         </div>
                         <div class="textContacs d-flex flex-column px-2 w-75">
-                            <span>fddf</span>
-                            <span>fddf</span>
+                            <span>{{utenti.name}}</span>
+                            <span>Ultimo messaggio inviato</span>
                         </div>
                         <div class="date">
                             <span>10.00</span>

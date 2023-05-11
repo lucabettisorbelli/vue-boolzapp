@@ -21,4 +21,17 @@ body {
 
 .imgContacts img {
     border-radius: 50%;
+} 
+
+.rigthUsers * {
+    margin: 0.3rem;
+}
+
+.imgPersonal {
+    width: 3rem;
+    height: 3rem;
+}
+
+.imgPersonal img {
+    border-radius: 50%;
 }
