@@ -15,7 +15,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
 
 .headerTextUsers {
     height: 4em;
-    background-color: rgb(234, 234, 234);
+    background-color: #eaeaea;
 }
 
 .boxNotification {
@@ -27,12 +27,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
     left: 5% !important ;
 }
 
-.imgContacts, .imgPersonal{
+.imgContacts, .imgPersonal, .messagesIcon{
     width: 3rem;
     height: 3rem;
 }
 
-.imgContacts img, .imgPersonal img {
+.imgContacts img, .imgPersonal img, .messagesIcon img {
     border-radius: 50%;
 } 
 
@@ -48,4 +48,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', end
 
 .search > input {
     border: none;
+}
+
+.userBox {
+    overflow-y: scroll;
+}
+
+.headerMessages {
+    height: 4em;
+    background-color: #eaeaea;
+    border-left: 0.1px solid grey;
+}
+
+.messagesRigth * {
+    padding: 0.5rem;
+}
+
+.messagesArea {
+    height: calc(100% - 8em);
+    background-image: url(/img/mine.jpg);
+    overflow-y: scroll;
+}
+
+.messagesFooter {
+    height: 4em;
+    background-color: #f3eeea;
+}
+
+.messageSend {
+    background-color: #d5f9ba;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 50px !important;
+    margin-top: 10px !important;
+    width: 250px;   
+    margin: 3px;
+    align-self: end;
+}
+
+.messageReceived {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px !important;
+    margin-left: 50px !important;
+    padding: 5px;
+    width: 250px;
+    margin: 3px;
 }

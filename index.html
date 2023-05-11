@@ -49,23 +49,54 @@
                         <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
                     </div>
 
-                    <div v-for="utenti in contacts" class="userContacs d-flex m-2">
-                        <div class="imgContacts">
-                            <img class="img-fluid" :src="utenti.avatar" alt="">
-                        </div>
-                        <div class="textContacs d-flex flex-column px-2 w-75">
-                            <span>{{utenti.name}}</span>
-                            <span>Ultimo messaggio inviato</span>
-                        </div>
-                        <div class="date">
-                            <span>10.00</span>
+                    <div class="userBox">
+                        <div v-for="utenti in contacts" class="userContacs d-flex m-2 my-3">
+                            <div class="imgContacts">
+                                <img class="img-fluid" :src="utenti.avatar" alt="">
+                            </div>
+                            <div class="textContacs d-flex flex-column px-2 w-75">
+                                <span>{{utenti.name}}</span>
+                                <span>Ultimo messaggio inviato</span>
+                            </div>
+                            <div class="date">
+                                <span>10.00</span>
+                            </div>
                         </div>
                     </div>
 
                 </div>
                 <!-- parte di destra con messaggistica -->
-                <div class="col-7 bg-success">
-                    <h1>CIAO</h1>
+                <div class="col-7">
+
+                    <div class="headerMessages d-flex justify-content-between align-items-center">
+                        <div class="messagesLeft d-flex align-items-center">
+                            <div class="messagesIcon ms-2">
+                                <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
+                            </div>
+                            <div class="messagesText d-flex flex-column">
+                                <span>Michele</span>
+                                <span>Ultimo accesso oggi alle 12.00</span>
+                            </div>
+                        </div>
+                        <div class="messagesRigth">
+                            <i class="fa-solid fa-spinner"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="messagesArea">
+                        <div class="textArea d-flex flex-column">
+                            <div class="messageSend">ciao</div>
+                            <div class="messageSend">ciao</div>
+                            <div class="messageReceived">ciaoi</div>
+                            <div class="messageReceived">ciaoi</div>
+                        </div>
+                    </div>
+
+                    <div class="messagesFooter">
+                        
+                    </div>
                 </div>
             </div>
         </div>
