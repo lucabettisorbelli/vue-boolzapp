@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <div class="container mt-3">
             <div class="row">
+                <!-- parte di sinistra con nomi Users -->
                 <div class="col-4 bg-primary">
-                    <h1>CIAO</h1>
+                    <div class="headerTextUsers d-flex justify-content-between align-items-center">
+                        <div class="leftUsers px-2">
+                            <span>jkld</span> <!--img profilo-->
+                            <span>jkld</span>
+                        </div>
+                        <div class="rigthUsers">
+                            <i class="fa-solid fa-spinner"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="boxNotification d-flex bg-secondary mt-2">
+                        <div class="notificationLeft px-2">
+                            <span>jdla</span> <!--img profilo-->
+                        </div>
+                        <div class="notificationRight d-flex flex-column">
+                            <span>jdla</span>
+                            <span>jdla</span>
+                        </div>
+                    </div>
+
+                    <div class="search mt-2 position-relative">
+                        <input class="w-100 px-5" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
+                    </div>
+
+                    <div class="userContacs d-flex mt-2">
+                        <div class="imgContacts">
+                            <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="textContacs d-flex flex-column px-2 w-75">
+                            <span>fddf</span>
+                            <span>fddf</span>
+                        </div>
+                        <div class="date">
+                            <span>10.00</span>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- parte di destra con messaggistica -->
                 <div class="col-8 bg-success">
                     <h1>CIAO</h1>
                 </div>
@@ -25,4 +69,5 @@
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>
