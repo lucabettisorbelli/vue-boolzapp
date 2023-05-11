@@ -17,7 +17,7 @@
         <div class="container mt-3">
             <div class="row">
                 <!-- parte di sinistra con nomi Users -->
-                <div class="col-4 bg-primary">
+                <div class="col-5 bg-white">
                     <div class="headerTextUsers d-flex justify-content-between align-items-center">
                         <div class="leftUsers d-flex align-items-center px-2">
                             <div class="imgPersonal pe-2">
@@ -32,22 +32,24 @@
                         </div>
                     </div>
 
-                    <div class="boxNotification d-flex bg-secondary mt-2">
-                        <div class="notificationLeft px-2">
-                            <span>jdla</span> <!--img profilo-->
+                    <div class="boxNotification d-flex pt-2">
+                        <div class="notificationLeft px-2 d-flex align-items-center">
+                            <span class="iconBell p-2">
+                                <i class="fa-regular fa-bell-slash"></i>
+                            </span> 
                         </div>
                         <div class="notificationRight d-flex flex-column">
-                            <span>jdla</span>
-                            <span>jdla</span>
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <span>Attiva notifiche desktop</span>
                         </div>
                     </div>
 
-                    <div class="search mt-2 position-relative">
+                    <div class="search position-relative">
                         <input class="w-100 px-5" type="text" placeholder="Cerca o inizia una nuova chat">
                         <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
                     </div>
 
-                    <div v-for="utenti in contacts" class="userContacs d-flex mt-2">
+                    <div v-for="utenti in contacts" class="userContacs d-flex m-2">
                         <div class="imgContacts">
                             <img class="img-fluid" :src="utenti.avatar" alt="">
                         </div>
@@ -62,7 +64,7 @@
 
                 </div>
                 <!-- parte di destra con messaggistica -->
-                <div class="col-8 bg-success">
+                <div class="col-7 bg-success">
                     <h1>CIAO</h1>
                 </div>
             </div>

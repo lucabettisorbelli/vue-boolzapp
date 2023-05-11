@@ -1,37 +1,51 @@
 body {
-    background: rgb(0,150,136);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#009688+20,dbdbd2+20 */
+background: #009688; /* Old browsers */
+background: -moz-linear-gradient(top,  #009688 20%, #dbdbd2 20%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #009688 20%,#dbdbd2 20%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #009688 20%,#dbdbd2 20%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', endColorstr='#dbdbd2',GradientType=0 ); /* IE6-9 */
+
 }
 
-.col-4, .col-8 {
+.col-5, .col-7 {
     height: 95vh;
+    padding: 0 !important;
 }
 
-.headerTextUsers, .boxNotification {
+.headerTextUsers {
     height: 4em;
+    background-color: rgb(234, 234, 234);
+}
+
+.boxNotification {
+    height: 4em;
+    background-color: #8edafc;
 }
 
 .search .fa-solid {
     left: 5% !important ;
 }
 
-.imgContacts {
+.imgContacts, .imgPersonal{
     width: 3rem;
     height: 3rem;
 }
 
-.imgContacts img {
+.imgContacts img, .imgPersonal img {
     border-radius: 50%;
 } 
 
 .rigthUsers * {
-    margin: 0.3rem;
+    padding: 0.5rem;
 }
 
-.imgPersonal {
-    width: 3rem;
-    height: 3rem;
-}
-
-.imgPersonal img {
+.iconBell {
     border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+}
+
+.search > input {
+    border: none;
 }
