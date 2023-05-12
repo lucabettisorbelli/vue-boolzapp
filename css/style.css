@@ -57,6 +57,7 @@ background: linear-gradient(to bottom,  #009688 20%,#dbdbd2 20%); /* W3C, IE10+,
 
 .userBox {
     overflow-y: scroll;
+    height: 550px;
 }
 
 .headerMessages {
@@ -86,7 +87,8 @@ background: linear-gradient(to bottom,  #009688 20%,#dbdbd2 20%); /* W3C, IE10+,
     padding: 5px;
     margin-right: 50px !important;
     margin-top: 10px !important;
-    width: 250px;   
+    word-wrap: break-word !important;
+    max-width: 300px;  
     margin: 3px;
     align-self: end;
 }
@@ -97,7 +99,8 @@ background: linear-gradient(to bottom,  #009688 20%,#dbdbd2 20%); /* W3C, IE10+,
     margin-top: 10px !important;
     margin-left: 50px !important;
     padding: 5px;
-    width: 250px;
+    max-width: 300px;
+    word-wrap: break-word !important              ;
     margin: 3px;
 }
 
