@@ -169,5 +169,12 @@ createApp ({
             ]
             
         }
+    },
+    methods: {
+        getStatusSent() {
+            
+
+            
+        }
     }
 }).mount('#app')

@@ -86,14 +86,12 @@
                     </div>
 
                     <div class="messagesArea">
-                        <div class="textArea d-flex flex-column">
-                            <div class="messageSend">ciao</div>
-                            <div class="messageSend">dddddddddddddddddddddddddddddddddddddddao</div>
-                            <div class="messageReceived">ciaoi</div>
-                            <div class="messageReceived">dddaaassssssaaaaaaaaaddddsssssssssssdddddddddiaoi</div>
+                        <div v-for="(contact,i) in contacts" class="textArea d-flex flex-column">
+                            <div :class="getStatusSent(i)" v-for="user in contact.messages">{{user.status === 'sent' ? user.message : ""  }}</div>
+                            <div v-for="user in contact.messages" class="messageReceived">{{user.status === 'received' ? user.message : ""  }}</div>
                         </div>
                     </div>
-
+                    
                     <div class="messagesFooter d-flex align-items-center justify-content-between px-3">
                         <div class="iconFooter">
                             <i class="fa-regular fa-face-smile"></i>
