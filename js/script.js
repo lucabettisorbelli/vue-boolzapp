@@ -4,6 +4,7 @@ const { createApp } = Vue
 createApp ({
     data() {
         return {
+            selectedContact: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -171,9 +172,16 @@ createApp ({
         }
     },
     methods: {
-        getStatusSent() {
+        getClass (messaggio) {
+            if (messaggio.status === 'sent') {
+                return 'messageSend';
+            } else if(messaggio.status === 'received') {
+                return 'messageReceived'
+            }
+        },
+        showConversation(contatto) {
             
-
+            this.selectedContact = contatto
             
         }
     }

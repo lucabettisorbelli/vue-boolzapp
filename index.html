@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="userBox">
-                        <div v-for="utenti in contacts" class="userContacs d-flex m-2 my-3">
+                        <div v-for="(utenti, i) in contacts" @click="showConversation(utenti)" class="userContacs d-flex m-2 my-3">
                             <div class="imgContacts">
                                 <img class="img-fluid" :src="utenti.avatar" alt="">
                             </div>
@@ -69,12 +69,12 @@
                 <div class="col-7">
 
                     <div class="headerMessages d-flex justify-content-between align-items-center">
-                        <div class="messagesLeft d-flex align-items-center">
+                        <div v-if="selectedContact" class="messagesLeft d-flex align-items-center">
                             <div class="messagesIcon ms-2">
-                                <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
+                                <img class="img-fluid" :src="selectedContact.avatar" alt="">
                             </div>
                             <div class="messagesText d-flex flex-column">
-                                <span>Michele</span>
+                                <span>{{selectedContact.name}}</span>
                                 <span class="text-secondary">Ultimo accesso oggi alle 12.00</span>
                             </div>
                         </div>
@@ -86,9 +86,11 @@
                     </div>
 
                     <div class="messagesArea">
-                        <div v-for="(contact,i) in contacts" class="textArea d-flex flex-column">
-                            <div :class="getStatusSent(i)" v-for="user in contact.messages">{{user.status === 'sent' ? user.message : ""  }}</div>
-                            <div v-for="user in contact.messages" class="messageReceived">{{user.status === 'received' ? user.message : ""  }}</div>
+                        <div v-if="selectedContact" class="textArea d-flex flex-column">
+                            <div v-for="messaggio in selectedContact.messages" :class="getClass(messaggio)">
+                                {{messaggio.message}}
+                                <div class="dateMessage">{{messaggio.date}}</div>
+                            </div>
                         </div>
                     </div>
                     
