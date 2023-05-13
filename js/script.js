@@ -4,6 +4,7 @@ const { createApp } = Vue
 createApp ({
     data() {
         return {
+            inputMessage: null,
             selectedContact: null,
             contacts: [
                 {
@@ -183,6 +184,19 @@ createApp ({
             
             this.selectedContact = contatto
             
+        },
+        newMessageSent() {
+
+            let nuovoMessaggio = {
+                date: '13/05/2022',
+                message: this.inputMessage,
+                status: 'sent'  
+            }
+
+            this.selectedContact.messages.push(nuovoMessaggio);
+
+            this.inputMessage = "";
+
         }
     }
 }).mount('#app')
