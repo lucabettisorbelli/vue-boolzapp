@@ -216,7 +216,7 @@ createApp ({
             }, 1000);
         },
         findUser () {
-            this.filteredContact = this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact));           
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact) || this.searchContact == null);           
         },
         
     }, 

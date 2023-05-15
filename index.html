@@ -52,7 +52,7 @@
                                 class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
                         </div>
                         <div class="userBox">
-                            <div v-for="(utenti, i) in filteredContact" @click="showConversation(utenti)"
+                            <div v-for="(utenti, i) in findUser()" @click="showConversation(utenti)"
                                 class="userContacs d-flex m-2 my-3">
                                 <div class="imgContacts">
                                     <img class="img-fluid" :src="utenti.avatar" alt="">
