@@ -88,12 +88,19 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-
+                    
                     <div class="messagesArea">
                         <div v-if="selectedContact" class="textArea d-flex flex-column">
-                            <div v-for="messaggio in selectedContact.messages" :class="getClass(messaggio)">
+                            <div v-for="(messaggio,i) in selectedContact.messages" :class="getClass(messaggio)">
                                 {{messaggio.message}}
-                                <div class="dateMessage">{{messaggio.date}}</div>
+                                <div class="dateMessage">{{messaggio.date}}
+                                    <span>
+                                        <i class="dropdown-toggle" @click="getDropdown(i)"></i>
+                                    </span>
+                                    <ul class="list-unstyled" v-if="showDropdown[i]">
+                                        <li @click="deleteMessage(i)">cancella</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

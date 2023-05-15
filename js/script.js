@@ -5,9 +5,10 @@ createApp ({
     data() {
         return {
             inputMessage: null,
-            selectedContact: 0,
+            selectedContact: null,
             searchContact: null,
             filteredContact: null,
+            showDropdown: [],
             contacts: [
                 {
                     name: 'Michele',
@@ -218,7 +219,13 @@ createApp ({
         findUser () {
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact) || this.searchContact == null);           
         },
-        
+        getDropdown(i) {
+            console.log(i)
+            this.showDropdown[i] = !this.showDropdown[i];
+        },
+        deleteMessage(i) {
+            this.selectedContact.messages.splice(i,1)
+        }
     }, 
     
 }).mount('#app')

@@ -116,6 +116,19 @@ overflow-y: hidden;
     color:grey;
 }
 
+.dateMessage span i {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.dateMessage span i:hover {
+    cursor: pointer;
+}
+
+.dateMessage span ul:hover {
+    cursor: pointer;
+}
+
 .textFooter {
     width: 80%;
 }
