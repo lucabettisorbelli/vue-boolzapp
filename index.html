@@ -22,7 +22,7 @@
                         <div class="leftUsers d-flex align-items-center px-2">
                             <div class="imgPersonal pe-2">
                                 <img class="img-fluid" src="./img/avatar_io.jpg" alt="">
-                            </div> 
+                            </div>
                             <span>Sofia</span>
                         </div>
                         <div class="rigthUsers pe-2 text-secondary">
@@ -36,7 +36,7 @@
                         <div class="notificationLeft px-2 d-flex align-items-center">
                             <span class="iconBell p-2">
                                 <i class="fa-regular fa-bell-slash"></i>
-                            </span> 
+                            </span>
                         </div>
                         <div class="notificationRight d-flex flex-column">
                             <span>Ricevi notifiche di nuovi messaggi</span>
@@ -44,22 +44,26 @@
                         </div>
                     </div>
 
-                    <div class="search position-relative">
-                        <input class="w-100 px-5" type="text" placeholder="Cerca o inizia una nuova chat">
-                        <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
-                    </div>
-
-                    <div class="userBox">
-                        <div v-for="(utenti, i) in contacts" @click="showConversation(utenti)" class="userContacs d-flex m-2 my-3">
-                            <div class="imgContacts">
-                                <img class="img-fluid" :src="utenti.avatar" alt="">
-                            </div>
-                            <div class="textContacs d-flex flex-column px-2">
-                                <span>{{utenti.name}}</span>
-                                <span class="text-secondary">Ultimo messaggio inviato</span>
-                            </div>
-                            <div class="date text-secondary">
-                                <span>10.00</span>
+                    <div>
+                        <div class="search position-relative">
+                            <input v-model="searchContact" class="w-100 px-5" type="text"
+                                placeholder="Cerca o inizia una nuova chat" @input="findUser">
+                            <i
+                                class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y"></i>
+                        </div>
+                        <div class="userBox">
+                            <div v-for="(utenti, i) in filteredContact" @click="showConversation(utenti)"
+                                class="userContacs d-flex m-2 my-3">
+                                <div class="imgContacts">
+                                    <img class="img-fluid" :src="utenti.avatar" alt="">
+                                </div>
+                                <div class="textContacs d-flex flex-column px-2">
+                                    <span>{{utenti.name}}</span>
+                                    <span class="text-secondary">Ultimo messaggio inviato</span>
+                                </div>
+                                <div class="date text-secondary">
+                                    <span>10.00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,16 +97,19 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="messagesFooter d-flex align-items-center justify-content-between px-3">
                         <div class="iconFooter">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="textFooter">
-                            <input @keyUp.enter="newMessageSent()" v-model="inputMessage" type="text" placeholder="Scrivi un messaggio">
+                            <input @keyUp.enter="newMessageSent()" v-model="inputMessage" type="text"
+                                placeholder="Scrivi un messaggio">
                         </div>
                         <div class="iconFoot">
-                            <button @click="newMessageSent()">invia</button>
+                            <button @click="newMessageSent()">
+                                <i class="fa-solid fa-greater-than"></i>
+                            </button>
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>

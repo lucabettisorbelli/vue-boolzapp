@@ -127,3 +127,15 @@ overflow-y: hidden;
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.iconFoot {
+    display: flex;
+    justify-content: space-between;
+    width: 5em;
+    align-items: center;
+}
+
+.iconFoot > button {
+    border: 1px solid gray;
+    border-radius: 5px;
+}

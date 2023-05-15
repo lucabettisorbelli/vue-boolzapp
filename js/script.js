@@ -5,7 +5,9 @@ createApp ({
     data() {
         return {
             inputMessage: null,
-            selectedContact: null,
+            selectedContact: 0,
+            searchContact: null,
+            filteredContact: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -186,17 +188,40 @@ createApp ({
             
         },
         newMessageSent() {
-
+            if (this.inputMessage === "") {
+                return;
+            }
+        
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString();
+            const dateTime = `${date} ${time}`;
+        
             let nuovoMessaggio = {
-                date: '13/05/2022',
+                date: dateTime,
                 message: this.inputMessage,
                 status: 'sent'  
             }
-
+        
             this.selectedContact.messages.push(nuovoMessaggio);
-
             this.inputMessage = "";
-
-        }
-    }
+        
+            setTimeout(() => {
+                let risposta = {
+                    date: dateTime,
+                    message: 'ok',
+                    status: 'received'
+                }
+                this.selectedContact.messages.push(risposta);
+            }, 1000);
+        },
+        findUser () {
+            this.filteredContact = this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact));           
+        },
+        
+    }, 
+    
 }).mount('#app')
+
+
+
