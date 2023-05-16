@@ -59,10 +59,10 @@
                                 </div>
                                 <div class="textContacs d-flex flex-column px-2">
                                     <span>{{utenti.name}}</span>
-                                    <span class="text-secondary">Ultimo messaggio inviato</span>
+                                    <span class="text-secondary">Ultimo messaggio</span>
                                 </div>
                                 <div class="date text-secondary">
-                                    <span>10.00</span>
+                                    <span>{{getLastMessage(utenti)}}</span>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                         <i class="dropdown-toggle" @click="getDropdown(i)"></i>
                                     </span>
                                     <ul class="list-unstyled" v-if="showDropdown[i]">
-                                        <li @click="deleteMessage(i)">cancella</li>
+                                        <li @click="deleteMessage(i)">cancella messaggio</li>
                                     </ul>
                                 </div>
                             </div>

@@ -225,6 +225,10 @@ createApp ({
         },
         deleteMessage(i) {
             this.selectedContact.messages.splice(i,1)
+        },
+        getLastMessage(utenti) {
+            let LastMessage = utenti.messages[utenti.messages.length -1];
+            return LastMessage.date;
         }
     }, 
     
